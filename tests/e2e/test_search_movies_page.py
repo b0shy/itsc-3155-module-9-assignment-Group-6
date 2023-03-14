@@ -1,10 +1,6 @@
 # was made with the help of chatgpt
 
 # TODO: Feature 3
-from app import app
-import pytest
-from flask import request
-
 from app import app, movie_repository
 
 
