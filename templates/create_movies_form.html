@@ -6,4 +6,25 @@
 <h1 class="mb-5">Create Movie Rating</h1>
 <p class="mb-3">Create a movie rating below</p>
 <!-- TODO: Feature 2 -->
+<!--I used chatGPT and W3Schools to get a template for making input forms and a slider-->
+<script>
+    function updateValue(slider) {
+        var value = slider.value;
+        var valueDisplay = document.getElementById("valueDisplay");
+        valueDisplay.innerHTML = value;
+    }
+</script>
+    <form method="POST" action="/movies">
+        <label for="title">Movie Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+
+        <label for="director">Director:</label><br>
+        <input type="text" id="director" name="director"><br>
+
+        <label for="rating">Give a rating:</label>
+        <input type="range" id="rating" name="rating" min="1" max="5" value="3" oninput="updateValue(this)" />
+        <span id="valueDisplay">3</span>
+        <button type="submit">Submit Rating</button>
+    </form>
+      
 {% endblock %}
